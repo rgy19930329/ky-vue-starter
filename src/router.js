@@ -4,22 +4,21 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import Home from './pages/Home.vue';
-import T1 from './pages/T1.vue';
+import Config from './pages/Config.vue';
 import List from './pages/List.vue';
-import T3 from './pages/T3.vue';
-import Friday from './pages/Friday.vue';
+import Form from './pages/Form.vue';
 
 export default new Router({
   routes: [
     { 
-      name: 'index',
+      name: 'home',
       path: '/home',
       component: Home
     },
     { 
-      name: 't1',
-      path: '/t1',
-      component: T1
+      name: 'config',
+      path: '/config',
+      component: Config
     },
     {
       name: 'list',
@@ -27,14 +26,9 @@ export default new Router({
       component: List
     },
     {
-      name: 't3',
-      path: '/t3',
-      component: T3
-    },
-    {
-      name: 'friday',
-      path: '/friday',
-      component: Friday
+      name: 'form',
+      path: '/form',
+      component: Form,
     },
   ]
 });

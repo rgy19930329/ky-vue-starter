@@ -9,6 +9,14 @@
         <td>{{ props.item.string }}</td>
       </tr>
     </RTable>
+    <div class="page-bar">
+      <div class="page-bar-inner">
+        <Page
+          :total="total"
+          :current="current"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,6 +26,8 @@ export default {
   data() {
     return {
       list: [],
+      total: 100,
+      current: 2,
     }
   },
 

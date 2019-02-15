@@ -12,6 +12,7 @@
     "axios": "^0.18.0",
     "delegates": "^1.0.0",
     "iview": "^3.0.1",
+    "js-cookie": "^2.2.0",
     "lodash": "^4.17.5",
     "querystring": "^0.2.0",
     "vue": "^2.5.17",
@@ -30,7 +31,7 @@
   "eslintConfig": {
     "root": false,
     "env": {
-      "es6":true,
+      "es6": true,
       "node": true
     },
     "extends": [
@@ -39,7 +40,13 @@
     ],
     "rules": {
       "no-console": "off",
-      "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
+      "vue/no-parsing-error": [
+        2,
+        {
+          "x-invalid-end-tag": false
+        }
+      ],
+      "no-unused-vars": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"

@@ -3,7 +3,9 @@
     <table>
       <thead>
         <tr>
-          <th v-for="(item,index) of thead" :key="index">{{item}}</th>
+          <th v-for="(item,index) of thead" :key="index">
+            {{item}}
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -45,6 +47,8 @@
     }
     thead {
       background: #eef1f6;
+      font-weight: bold;
+      font-size: 16px;
     }
     tr {
       line-height: 45px;

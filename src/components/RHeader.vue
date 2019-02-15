@@ -1,8 +1,12 @@
 <template>
   <div class="header">
-    <Menu mode="horizontal" theme="light" active-name="2">
+    <Menu
+      v-if="loaded"
+      mode="horizontal"
+      theme="light"
+      :active-name="current">
       <template v-for="(item,index) of navs">
-        <MenuItem :key="index" :name="item.code">
+        <MenuItem :key="index" :name="item.code" :to="item.code">
           <Icon :key="index" :type="item.icon"/>
           {{item.label}}
         </MenuItem>
@@ -20,21 +24,35 @@ export default {
   name: "RHeader",
   data() {
     return {
-      current: "home",
+      loaded: false,
       navs: [],
-      userName: "lalala",
+      userName: "ranguangyu",
     };
   },
-  async created() {
-    const result = await this.$ajax({
-      url: "/vueapi/navs",
-    });
-    if (result.code === "0000") {
-      this.navs = result.data;
+  created() {
+    this.getNavs();
+  },
+  computed: {
+    current() {
+      return this.$route.name;
     }
   },
   methods: {
-    
+    async getNavs() {
+      const result = await this.$ajax({
+        url: "/vueapi/navs",
+      });
+      if (result.code === "0000") {
+        this.navs = result.data;
+        this.loaded = true;
+      }
+    },
+    /**
+     * 路由匹配规则
+     */
+    routerMatch() {
+
+    },
   }
 };
 </script>
