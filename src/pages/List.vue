@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "t2",
+  name: "List",
   data() {
     return {
       list: [],

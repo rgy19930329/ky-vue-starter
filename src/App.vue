@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import RHeader from '@/components/RHeader.vue';
+import RHeader from "@/components/RHeader.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     RHeader,
   },
