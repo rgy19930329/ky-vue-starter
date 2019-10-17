@@ -39,13 +39,36 @@ export default {
   },
   methods: {
     async getNavs() {
-      const result = await this.$ajax({
-        url: "/vueapi/navs",
-      });
-      if (result.code === "0000") {
-        this.navs = result.data;
-        this.loaded = true;
-      }
+      // const result = await this.$ajax({
+      //   url: "/yapi/vue-starter/navs",
+      // });
+      // if (result.code === "0000") {
+      //   this.navs = result.data;
+      //   this.loaded = true;
+      // }
+      this.navs = [
+        {
+          code: "home",
+          label: "Home",
+          icon: "ios-home-outline",
+        },
+        {
+          code: "list",
+          label: "List",
+          icon: "ios-list-box-outline",
+        },
+        {
+          code: "config",
+          label: "Config",
+          icon: "ios-cog",
+        },
+        {
+          code: "form",
+          label: "Form",
+          icon: "ios-create",
+        }
+      ];
+      this.loaded = true;
     },
     /**
      * 路由匹配规则

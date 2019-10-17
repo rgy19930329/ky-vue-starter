@@ -10,5 +10,9 @@ module.exports = {
   "/novelSearchApi": {
     target: "https://www.apiopen.top",
     changeOrigin: true,
+  },
+  "/yapi": {
+    target: "http://yapi.demo.qunar.com/mock/1196",
+    changeOrigin: true,
   }
 }
